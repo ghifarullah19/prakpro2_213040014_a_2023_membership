@@ -37,7 +37,6 @@ public class JenisMemberDao {
 
             // result diberikan nilai dari eksekusi query (Berisi jumlah row dari statement berarti berhasil, Berisi 0 berarti gagal)
             result = statement.executeUpdate();
-            System.out.println(result);
         } catch (SQLException e) {
             // jika terjadi error, maka akan ditampilkan errornya
             e.printStackTrace();

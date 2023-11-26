@@ -90,22 +90,17 @@ public class MainFrame extends JFrame {
     
     // method showJenisMemberFrame digunakan untuk menampilkan frame jenis member
     public void showJenisMemberFrame() {
-        // jika frame jenis member belum ditampilkan,
-        if (jenisMemberFrame == null) {
-            // maka akan menampilkan frame jenis member dengan parameter jenisMemberDao
-            jenisMemberFrame = new JenisMemberFrame(jenisMemberDao);
-        }
+        // menampilkan frame jenis member dengan parameter jenisMemberDao
+        jenisMemberFrame = new JenisMemberFrame(jenisMemberDao);
+        
         // frame jenis member akan ditampilkan
         jenisMemberFrame.setVisible(true);
     }
     
     // method showMemberFrame digunakan untuk menampilkan frame member
     public void showMemberFrame() {
-        // jika frame member belum ditampilkan,
-        if (memberFrame == null) {
-            // maka akan menampilkan frame member dengan parameter memberDao dan jenisMemberDao
-            memberFrame = new MemberFrame(memberDao, jenisMemberDao);
-        }
+        // menampilkan frame member dengan parameter memberDao dan jenisMemberDao
+        memberFrame = new MemberFrame(memberDao, jenisMemberDao);
         
         // frame member akan diisi comboJenis dengan data jenis member
         memberFrame.populateComboJenis();
